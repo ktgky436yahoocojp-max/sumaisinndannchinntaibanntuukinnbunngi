@@ -406,7 +406,7 @@ export default function App() {
     .slice(0,3);
 
   const catRatios={};
-  questions.forEach(q=>{
+  activeQuestions.forEach(q=>{
     const ans=answers[q.id]??0;
     const max=Math.max(...q.options.map(o=>o.score));
     if (!catRatios[q.category]) catRatios[q.category]={total:0,max:0};
